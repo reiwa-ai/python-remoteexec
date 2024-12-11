@@ -21,7 +21,7 @@ The goal is a secure sandbox. That includes code execution hooks, exception hand
 # Install
 
 ```sh
-$ pip install remoteexec
+$ pip install pyremoteexec
 ```
 
 or

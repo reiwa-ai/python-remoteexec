@@ -14,10 +14,10 @@ except IOError:
 
 # version
 here = os.path.dirname(os.path.abspath(__file__))
-version = '0.1.2'
+version = '1.0.0'
 
 setup(
-    name="remoteexec",
+    name="pyremoteexec",
     version=version,
     project_urls = {
     'homepage': 'https://www.reiwa-ai.co.jp/snippetbox.html',
