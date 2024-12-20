@@ -38,7 +38,7 @@ A program to wait for connections on a server that runs code.
 
 ```python
 from remoteexec.communicate import *
-from remoteexec.input import *
+from remoteexec.inout import *
 
 listen_addr = '1.1.1.1'
 listen_port = 9165
@@ -399,7 +399,7 @@ Place the following script in the container with the name 'server.py'.
 ```python
 import sys
 from remoteexec.communicate import *
-from remoteexec.input import *
+from remoteexec.inout import *
 
 sync_frequency = 5
 fpS = ConsoleIO(sys.stdout, sys.stdin)
@@ -417,6 +417,7 @@ runner = SnippetRunner.run_docker()
 or
 
 ```python
+from remoteexec.remoteexec import SnippetRunnerRemote
 from remoteexec.inout import *
 connection = PipeIO(('docker', 'run', '-i', '--rm', 'dockercontainername', 'python', '-u', 'server.py'))
 runner = SnippetRunnerRemote(connection=connection)
