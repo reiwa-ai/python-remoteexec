@@ -4,4 +4,4 @@ COPY requirements.txt /scripts
 COPY scripts/* /scripts
 ADD remoteexec.tar /scripts
 RUN pip install -r requirements.txt
-CMD ['python', 'server.py']
+CMD ["python", "server.py"]
