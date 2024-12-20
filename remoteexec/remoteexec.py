@@ -260,13 +260,13 @@ class SnippetRunner:
 
     def run_local():
         return SnippetRunner(local_run=True)
-    def run_docker(docker_command=['docker', 'run', '-i', 'snippetrunner:latest', 'python','-u', 'server.py'],
+    def run_docker(docker_command=['docker', 'run', '-i', 'remoteexec:latest', 'python','-u', 'server.py'],
                    sync_frequency:float = 5,
                    sync_conflict_policy:ConflictSolvePolicy = ConflictSolvePolicy.HOST_PRIORITIZED,
                    sync_snippet_share_only:bool = True,
                    sync_shared_depth:int = -1):
         return SnippetRunner(docker_run=True,
-                             docker_command=['docker', 'run', '-i', 'snippetrunner:latest', 'python','-u', 'server.py'],
+                             docker_command=['docker', 'run', '-i', 'remoteexec:latest', 'python','-u', 'server.py'],
                              sync_frequency=sync_frequency,
                              sync_conflict_policy=sync_conflict_policy,
                              sync_snippet_share_only=sync_snippet_share_only,
